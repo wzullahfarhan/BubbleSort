@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class BubbleSort{
     public static void ShowArray(int arr[]){
         for(int i=0;i<arr.length;i++){
@@ -5,7 +6,16 @@ public class BubbleSort{
         }
     }
     public static void main(String args[]){
-        int arr[]={77,44,99,11,88,};
+        Scanner sc=new Scanner(System.in); //new object
+        System.out.print("Enter the Size of array: ");
+        int a=sc.nextInt();
+
+        int arr[]=new int[a];
+        System.out.print("Enter "+a+" array elements: ");
+        //array Input
+        for(int i=0;i<a;i++){
+            arr[i]=sc.nextInt();
+        }
         ShowArray(arr);
         //bubble Sort
         for(int i=0;i<arr.length-1;i++){
@@ -19,6 +29,7 @@ public class BubbleSort{
             }
         }
         System.out.println();
+        //sorted Array Called
         ShowArray(arr);
 
     }
